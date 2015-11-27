@@ -1,0 +1,7 @@
+# name : for
+# key : for
+# contributor :
+# --
+for (${1:i} in ${2:1 : length(array)}) {
+   $3
+}

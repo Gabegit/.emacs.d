@@ -1,0 +1,6 @@
+# contributor: Guomin Li ,2012/3/11
+# name: \textcolor^C-2
+#binding: C-2
+# key: color
+# --
+\textcolor{${1:colorname}}{`yas/selected-text`$2}

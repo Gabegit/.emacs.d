@@ -1,0 +1,59 @@
+# contributor: Guomin Li ,2012/3/3
+# name: cjk
+# key: cjk
+# group : template
+# --
+% !Mode:: "TeX:UTF-8"
+%% 文档默认使用UTF-8的格式打开，避免乱码。%%%tex文件存为“utf8无签名 格式。方法：C-xENTER f UTF-8,C-XC-S.
+%% 使用中文字体宏包CTEX，文类使用标准的文类， ARTICLE,BOOK,REPORT,BEAMER.%%  .
+%%  Created by Li Guomin,liguomin88@gmail.com %%  2011/10/7
+%% 中文字体宏包ctex支持cjk，cct，xecjk三种中文latex系统，它嵌入了一个有CJK宏包提供的CJK*环境。
+%% 6种type1中文字库，songti heiti angsong kaishu youyuan lishu
+%% 中文字号设置，zihao{#},初号（0），小初（-0），一号（1），小一（-1），...,四号（4），小四（-4），...
+%% \sepackage{ctexcap}% 中文标题宏包,注意：如果使用中文字体ctex宏包就不能再使用这个宏包，否则会出错！！！
+
+\documentclass[a4paper,12pt]{article} % or book, report
+\usepackage[space,UTF8]{ctex} % also can use CJK package.
+\usepackage{graphicx}
+\usepackage[top=2.3cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[usenames]{xcolor}
+\usepackage{pdfsync} %同步pdf，搜索作用
+\usepackage{hyperref} %编译两次，即可生产书签。支持中文书签（中文标题）
+\hypersetup{
+   unicode=true,%
+   colorlinks=true,%
+   citecolor=black,%
+   filecolor=black,%
+   linkcolor=blue,%
+   urlcolor=blue
+   pdfstartview=FitH 
+}
+\usepackage{cmap} %解决复制中文乱码问题
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+%\pagestyle{plain}
+\usepackage[onehalfspacing]{setspace} %行距宏包，不修改图标标题和脚注的行距。可选参数：singlespacing,onehalfspacing,doublespacing. 或者用 %\renewcommand{aselinestretch}{1.2} %影响所有行距，包括脚注。
+ % =======
+ 
+\begin{document}
+\begin{CJK*}{UTF8}{song}
+\title{}
+\author{ \thanks{}}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This is the abstract of this paper.
+\end{abstract}
+
+\section{} % (fold)
+\label{sct:}  %section name~\ref{section_name}
+
+\subsection*{}
+
+
+
+\end{CJK*}
+\end{document}

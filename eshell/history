@@ -1,0 +1,50 @@
+ls
+./myfirst
+./myfirst
+./myfirst
+g++ convert.cpp -o convert
+./convert
+./convert
+g++ ourfunc.cpp -o our
+./our
+cd ..
+cd Chapter\ 6/
+g++ cinfish.cpp  -o cinfish
+./cinfish
+./c
+./cinf
+./cinfish
+g++ arma-test.cpp -o arma-test -O2 -larmadillo
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 
+g++ arma-test.cpp -o arma-test -O2 -larmadillo 
+./arma-test 

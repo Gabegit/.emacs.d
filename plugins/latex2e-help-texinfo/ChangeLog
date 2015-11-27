@@ -1,0 +1,331 @@
+2011-05-12  Karl Berry  <karl@gnu.org>
+
+	* May 2011 release for TeX Live 2011.
+
+	* latex2e.texi (Text symbols): \texttwelveudash is a 2/3 em-dash,
+	and remove spurious duplicate \textordfeminine entry.
+	Report from Eric Jablow, 12 Apr 2011 05:17:47.
+
+2011-05-05  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Document templates): Add link to
+	http://www.howtotex.com/templates.
+
+2011-05-03  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Overview): mention other engines, etc.
+	(About this document): new node, for bug address, home page, etc.
+	
+	* latex2e.texi (Page layout parameters): discuss \linewidth
+	vs. \columnwidth vs. \textwidth vs. \hsize in more detail.
+
+2010-09-03  Karl Berry  <karl@gnu.org>
+
+	* latex2e-es.texi: translation to Spanish, from Nacho Pacheco,
+	27 Aug 2010 19:15:47.
+	* Makefile: also build the Spanish.
+
+2010-09-03  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: update TUGboat sample.
+	
+	* Makefile (%.html): use new perl makeinfo (texi2html), so no need
+	for g_t kludge.
+
+2010-07-12  Karl Berry  <karl@gnu.org>
+
+	* July 2010 release for TL 2010.
+
+	* latex2e.texi (Text symbols): add many from ltoutenc.
+
+2009-12-25  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Symbolic footnotes): new section.
+
+2009-11-01  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Accents): add \underbar, although it isn't an accent.
+	(Math miscellany): better distinguish \underline and \underbar.
+
+2009-10-27  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Line breaking, Page breaking): move to earlier,
+	matching top-level @menu.
+
+2009-09-07  Karl Berry  <karl@tug.org>
+
+	* September 2009 release for TL 2009.
+
+2009-04-23  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Indexes): add considerably more info.
+
+2008-06-12  Karl Berry  <karl@tug.org>
+
+	* 2.0 release for ctan.org/get/doc/latex-info, and TeX Live 2008.
+
+2007-11-05  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \put \raggedbottom
+
+2007-11-04  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \ps \psi \Psi \pushtabs
+
+2007-11-03  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \protect
+
+2007-10-29  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (math): \Pr \prec \preceq \prime \prod \propto.
+
+2007-10-28  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Text symbols): \poptabs \pounds.
+
+2007-10-25  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \perp \phi \pi \Pi \pm \pmod
+
+2007-10-24  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \part \partial
+
+2007-10-23  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \parskip
+
+2007-10-22  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \parsep
+
+2007-10-21  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \parindent
+
+2007-10-20  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \parbox
+
+2007-10-17  Karl Berry  <karl@gnu.org>
+
+	*  latex2e.texi: \paragraph \parallel
+
+2007-10-16  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \pagestyle
+
+2007-10-15  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \pagenumberingstyle \pageref
+
+2007-10-11  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \oplus \oslash \otimes
+
+2007-10-10  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \onecolumn \opening
+
+2007-10-08  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \dot \oe \OE \oint \omega \Omega \ominus
+
+2007-10-07  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (\oddsidemargin)
+
+2007-10-06  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \obeycr, \restorecr; split page/line breaking into
+	separate chapters.
+
+2007-10-05  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \not \notin \nu \nwarrow \o \O
+
+2007-10-04  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (\normalmarginpar \normalsize)
+
+2007-10-03  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \nopagebreak
+
+2007-06-27  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \flat \flushbottom
+
+2007-06-26  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \evensidemargin \exists \exp \fbox \fboxrule
+	\fboxsep
+
+2007-06-25  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \epsilon \equiv \eta
+
+2007-06-24  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \em \emptyset \encl
+
+2007-06-23  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \doublerulesep \downarrow \Downarrow \ell
+
+2007-06-22  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \dot \doteq \dotfill
+
+2007-06-21  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \displaystyle
+
+2007-06-20  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \deg \delta \Delta \det \diamond \Diamong
+	\diamondsuit \dim \div
+
+2007-06-19  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \ddag \ddagger \ddot
+
+2007-06-18  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \dblfloatpagefraction \dblfloatsep
+	\dbltextfloatsep \dbltopfraction
+
+2007-06-17  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \day \month \year; put xref chapter earlier.
+
+2007-06-16  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \dashbox \dashv \date
+
+2007-06-15  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \d \dag \dagger
+
+2007-06-14  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \cos \cosh \cot \coth \cup
+
+2007-06-13  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \cong \coprod \copyright
+
+2007-06-12  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \columnsep \columnseprule \columnwidth
+
+2007-06-11  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \cline \closing \clubsuit
+
+2007-06-03  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \chi \circ \circle[*]
+
+2007-06-01  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \centering \chapter \check
+
+2007-05-31  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \caption \cc \cdot \cdots
+
+2007-05-30  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \cal \cap
+
+2007-05-24  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \bottomfraction, \bowtie, \Box, \breve, \bullet, \c.
+
+2007-05-23  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \boldmath, \bot.
+
+2007-05-22  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (\bigskip, \bmod)
+
+2007-05-21  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Math Symbols): \big operators
+
+2007-05-19  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Using BibTeX): \bibliography, \bibliographystyle
+
+2007-05-18  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (\bf, \bibitem)
+
+2007-05-17  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (verse environment, \beta)
+
+2007-05-15  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (titlepage, verbatim): environments.
+	(\verb).
+
+2007-05-14  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (theorem): environment.
+
+2007-05-12  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (tabbing): environment.
+
+2007-04-12  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (\AT): new node for \@.
+
+2007-04-11  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (tabbing): \a' \a` \a= for accents.
+
+2007-04-10  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (Accents): \~ for tilde accent.
+
+2007-04-09  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \|
+
+2007-04-06  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \\ in its various contexts
+
+2007-04-02  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: macron accent
+	* latex2e.texi (Accents): \= for macron.
+
+2007-04-01  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: \: \; \<
+
+2007-03-30  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: through \.
+
+2007-03-28  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: remove unneeded @page, fix over/underfull boxes, etc.
+
+2007-03-27  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi: remove node pointers
+	* latex2e.texi: \*: discretionary multiplication.
+
+2007-03-21  Karl Berry  <karl@gnu.org>
+
+	* latex2e.texi (\SPACE): new node.
+
+	* latex2e.texi: remove comments, single space after @node for ease
+	of searching.

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: md2beamerMaker
+# key: md2beamer
+# --
+pandoc -t beamer --slide-level 2 --template="/Users/gabe/.emacs.d/beamer_template.tex" `(file-name-nondirectory (buffer-file-name))` --latex-engine=xelatex -V theme=Singapore -o  `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.pdf

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: insert-r-chunk
+# key: insertr
+#binding:C-S-i
+# --
+\`\`\`\{r chunkName,${1:echo=TRUE,eval=TRUE,warning=FALSE,error=TRUE}}
+$0
+\`\`\`

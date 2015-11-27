@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name : Snippet header
+# contributor : joaotavora
+# key: vars
+# --
+# name : $1${2:
+# key : ${3:trigger-key}}${4:
+# contributor : $6
+# key: vars
+# group : $7
+# --
+$0

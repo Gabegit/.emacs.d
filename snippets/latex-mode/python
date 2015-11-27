@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: pythoncodes_py
+# key: py
+# --
+\lstset{language=python}
+\begin[language=python]{lstlisting}
+$0
+\end{lstlisting}

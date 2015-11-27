@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: block
+# key: block
+# binding: direct-keybinding
+# --
+\begin{block}{${1:block name}}
+${2}
+\end{block}

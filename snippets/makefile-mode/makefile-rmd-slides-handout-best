@@ -1,0 +1,66 @@
+# -*- mode: snippet -*-
+# name: makefile-rmd-slides-handout-best
+# key: makermd
+# --
+
+# 这是目前最好的makefile 对于Rmd编译为beamer、handout和ioslides 的html文件。
+# 使用rmdyaml 生成yaml header
+# Rmd文件slides分割用“----”
+# M-x insert-a-tab-for-makefile to insert a tab
+
+
+SRC = $(wildcard *.Rmd)
+
+PDFS=$(SRC:.Rmd=.pdf)
+HTML=$(SRC:.Rmd=.html)
+HD=$(SRC:.Rmd=-handout.pdf)
+
+#
+# target:  dependency1 dependency2 ...
+#     <tab> command
+
+# create a hddir directory
+hdd=hddir
+
+$(hdd): 
+<tab>mkdir -p $(hdd)
+
+# make commands
+all: clean $(PDFS) $(HTML) hd clean
+
+pdf: $(PDFS)
+
+html: $(HTML)
+
+hd: $(hdd) $(hdd)/$(HD)
+
+
+# rules-----
+%.pdf: %.Rmd
+<tab>Rscript -e "rmarkdown::render('$<','beamer_presentation')"
+<tab>mv $@ $(addsuffix -beamer.pdf,$(basename $@))
+
+$(hdd)/%-handout.pdf: %.Rmd
+<tab>cp $< $(hdd)/$(addsuffix -handout.Rmd,$(basename $<))
+<tab>perl -pi -w -e 's/----//g;' $(hdd)/$(addsuffix -handout.Rmd,$(basename $<))
+<tab>Rscript -e "rmarkdown::render('$(hdd)/$(addsuffix -handout.Rmd,$(basename $<))','pdf_document')"
+<tab>mv $(hdd)/$(addsuffix -handout.pdf,$(basename $<)) $(addsuffix -handout.pdf,$(basename $<))
+
+
+%.html: %.Rmd
+<tab>Rscript -e "rmarkdown::render('$<','ioslides_presentation')"
+<tab>mv $@ $(addsuffix -ioslides.html,$(basename $@))
+
+
+# other make commands
+read: $(PDFS)
+<tab>open $< &
+
+read-html: $(HTML)
+<tab>open $<
+
+clean:
+<tab>rm -rf *.log *.out *.nav *.aux *.toc *.snm *.bbl *.blg *.tex *.vrb *.*~ hddir
+
+distclean: clean
+<tab>rm -rf *.pdf *.html

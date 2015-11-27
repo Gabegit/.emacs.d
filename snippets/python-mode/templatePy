@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: templatePy
+# key: tempy
+# --
+# -*- coding:utf-8 -*-
+# `(file-name-nondirectory (buffer-file-name))`
+# gabe li <gabriellgm@mail.com>
+# `(current-time-string)`
+
+$1
+ 

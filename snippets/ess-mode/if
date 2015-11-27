@@ -1,0 +1,6 @@
+# name : if
+# contributor : Menglong Tan <tanmenglong@gmail.com>
+# --
+if ($1) {
+    $2
+}

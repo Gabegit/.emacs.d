@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: verb
+# key: verba
+# --
+
+~\verb|$1|~

@@ -1,0 +1,12 @@
+# name : function
+# contributor : Menglong Tan <tanmenglong@gmail.com>
+# --
+$1<- function($2) {
+#' @brief ${3:description}
+#'
+#' @author Menglong Tan
+#' @param ${4:a description}
+#' @return ${5:return blabla}
+#' @callGraphPrimitives
+$6
+}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: frac^C-e
+# key: frac
+# binding: C-1
+# group: math
+# --
+\frac{$1}{$2}

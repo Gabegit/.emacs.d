@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: math d
+# key: ud
+# group : math
+# --
+\mathrm{d}

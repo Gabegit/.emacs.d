@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: doublemath
+# key:dd
+# group:math
+# --
+$$`yas/selected-text`$1$$~

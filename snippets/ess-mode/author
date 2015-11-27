@@ -1,0 +1,4 @@
+# name : @author
+# contributor : Menglong Tan <tanmenglong@gmail.com>
+# --
+@author ${1:author}

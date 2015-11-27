@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: foreach..of..{..}
+# --
+  foreach ${1:lname} of  ${2:local/gobal/varlist/numlist} ${3:nameORlist} {
+                 	     ${4:codes}  `$1'
+	                                                   }

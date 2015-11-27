@@ -1,0 +1,67 @@
+# -*- mode: snippet -*-
+# name: makefile-md
+# key: makefile
+# --
+
+# Author: gabe
+# Update: 2015-11-18
+# shell command(shift-!): make pdf & make read
+# shell command: make clean
+# M-x insert-a-tab-for-makefile to insert a tab
+
+# for test
+
+SRC = $(wildcard *.md)
+
+html_theme=dzslides # macro like variable
+
+# others: Singapore
+latex_theme=Darmstadt
+
+# define a template
+latex_template=/Users/gabe/.emacs.d/beamer_template.tex
+
+# This uses Suffix Replacement within a macro:
+#   $(name:string1=string2)
+#  For each word in 'name' replace 'string1' with 'string2'
+#
+PDFS=$(SRC:.md=.pdf)
+HTML=$(SRC:.md=.html)
+
+
+#
+# target:  dependency1 dependency2 ...
+#     <tab> command
+
+all: clean $(PDFS) $(HTML)
+
+pdf: $(PDFS)
+
+html: $(HTML)
+
+# it uses automatic variables $<: the name of the prerequisite of
+# the rule(a .c file) and $@: the name of the target of the rule (a .o file)
+# (see the gnu make manual section about automatic variables)
+
+# line1 \
+# line1-too
+# same as line1 line1-too
+
+
+%.pdf: %.md $(latex_template)
+<tab>pandoc -t beamer --slide-level 2 -V theme:$(latex_theme) -V fontsize:10pt $< -o $@   --template=$(latex_template) --latex-engine=xelatex
+
+%.html: %.md
+<tab>pandoc -t $(html_theme) -s --mathjax $< -o $@
+
+read: $(PDFS)
+<tab>open $< &
+
+read-html: $(HTML)
+<tab>open $<
+
+clean:
+<tab>rm -rf *.log *.out *.nav *.aux *.toc *.snm *.bbl *.blg *.tex *.vrb *.*~
+
+distclean: clean
+<tab>rm -rf *.pdf *.html

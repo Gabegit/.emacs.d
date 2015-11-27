@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# key: table
+# name : \begin{table}
+# --
+\begin{table}[htbp]
+  \centering
+  \caption{${1:caption}}
+  \label{${2:tab-}}
+\begin{tabular}{${3:lcr}}
+%\toprule
+    $0
+%\bottomrule
+  \end{tabular}
+  \end{table}

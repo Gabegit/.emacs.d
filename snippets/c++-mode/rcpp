@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: rcpp
+# key: rcpp
+# --
+
+// souceCpp('file.cpp') in R shell
+//File: normaleqn.cpp
+ #include <RcppArmadillo.h>
+// [[Rcpp::depends(RcppArmadillo)]]
+
+using namespace Rcpp;
+using namespace arma;
+
+// [[Rcpp :: export]]
+$0
+// an example
+mat normeqn_qr(mat X, colvec y ) {￼
+    mat Q, R;
+    qr_econ( Q, R, X );
+    vec beta = solve(trimatu(R), Q.t()*y);
+    return beta;
+  }
+
+
+/*** R
+# using R code in this chunk
+
+
+*/

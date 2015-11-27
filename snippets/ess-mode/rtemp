@@ -1,0 +1,22 @@
+# name : r_template
+# key : rtemp
+# --
+
+#' This program is free software; you can redistribute it
+#' and/or modify it under the terms of the GPL licence
+#'
+#' @file [yas] elisp error! Wrong type argument: stringp, nil
+#' @author gabe li <gabriellgmg@gmail.com>
+#' @date Wed Mar 05 00:30:54 2014
+#' @brief
+#'
+library(foreign)
+
+prjPath = "" # \ need to be replaced by /
+rawDataPath = paste(prjPath,"/data/raw",sep="")
+cleanDataPath = paste(prjPath,"/data/clean",sep="")
+
+setwd(prjPath)
+getwd()
+
+

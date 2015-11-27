@@ -1,0 +1,46 @@
+# -*- mode: snippet -*-
+# name: scrapeweb
+# key: scrape
+# --
+
+
+import requests
+import re
+import sys
+import lxml.html
+
+type1 = sys.getfilesystemencoding()
+print 'getfilesystemencoding is ',type1
+type =sys.getdefaultencoding()
+print 'getdefaultencoding is ',type
+
+url = %1
+print url
+
+dom = requests.get(url)
+dom.status_code
+
+tree = lxml.html.fromstring(dom.text)
+content = tree.xpath("${0://span[@class='label_list']/label/text()}")
+
+#print content
+    for row in content:
+        print  row.encode(type)
+        
+
+        print "", rowyd.strip().encode(type)
+        #print "", rowyd.strip().encode('gbk')
+        #print "", rowyd.strip().encode('utf-8')
+        
+# define the main func for run itself  
+def main():
+    try:
+         
+    except:
+         
+
+if __name__ == '__main__':
+     main()
+     
+
+

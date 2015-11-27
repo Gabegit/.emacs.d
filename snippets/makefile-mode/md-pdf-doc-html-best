@@ -1,0 +1,52 @@
+# -*- mode: snippet -*-
+# name: md-pdf-doc-html-best
+# key: mdbest
+# --
+
+# for compiling markdown with Chinese fonts using pandoc
+# define a template
+latex_template=/Users/gabe/.emacs.d/mytemplate.tex
+css=/Users/gabe/.emacs.d/pandoc.css
+docsty/Users/gabe/.emacs.d/word-styles-reference-01.docx
+
+# Build a number of formats into the `out/` directory. These will get published via Github pages.
+
+# create a outdir directory
+outdir=out
+$(outdir): 
+<tab>mkdir -p $(outdir)
+
+# define files
+SRC = $(wildcard *.md)
+PDFS=$(SRC:.md=.pdf)
+DOCXS=$(SRC:.md=.docx)
+HTMLS=$(SRC:.md=.html)
+
+# commands
+pdf: clean $(outdir) $(PDFS)
+doc: $(DOCXS)
+html: $(HTMLS)
+
+all: clean $(outdir) $(PDFS) doc html
+
+# rules
+%.pdf: %.md
+<tab>pandoc --toc -N --filter /usr/local/bin/pandoc-citeproc --table-of-contents --toc-depth 2 --template=$(latex_template) --latex-engine=xelatex -V CJKmainfont=$(font) -f markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash $< -o $(outdir)/$(addsuffix -art.pdf,$(basename $@))
+
+%.docx: %.md
+<tab>pandoc --toc -N --reference-docx=$(docsty) --filter pandoc-citeproc  --highlight-style=haddock -f markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures $< -o $(outdir)/$@
+
+%.html: %.md
+<tab>pandoc --filter pandoc-citeproc  --css=$(css) --mathjax --highlight-style=haddock --smart --standalone --table-of-contents --toc-depth 3 -f markdown -t html  $< -o $(outdir)/$@
+<tab>cp $(css) $(outdir)
+
+
+
+read: $(PDFS)
+<tab>open $< &
+
+clean:
+<tab>rm -rf $(outdir)/*.pdf $(outdir)/*.html $(outdir)/*.docx
+
+distclean:
+<tab>rm -rf *~

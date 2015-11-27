@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ..mathenv
+# key: mathenv
+# --
+.. math::
+      
+   ${1:indent}
+   

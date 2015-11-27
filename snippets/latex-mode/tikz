@@ -1,0 +1,9 @@
+# contributor: Guomin Li ,2012/3/4
+# name: tikz
+# key: tikz
+# --
+
+%%don't forget \usepackage{tikz} in the preame
+\begin{tikzpicture}[${1:yscale=0.9}]
+  $0
+\end{tikzpicture}

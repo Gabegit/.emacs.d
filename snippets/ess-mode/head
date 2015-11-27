@@ -1,0 +1,21 @@
+# name : r_template
+# key : rtemp
+# --
+# -*- coding: utf-8 -*-
+#' This program is free software; you can redistribute it
+#' and/or modify it under the terms of the GPL licence
+#'
+#' @file `(file-name-nondirectory (buffer-file-name))`
+#' @author gabe li <gabriellgmg@gmail.com>
+#' @date `(current-time-string)`
+#' @brief $1
+#'
+
+prjPath = "`(file-name-directory (buffer-file-name))`" # \\ need to be replaced by /
+rawDataPath = paste(prjPath,"../dataRaw/",sep="")
+cleanDataPath = paste(prjPath,"../dataClean/",sep="")
+
+setwd(prjPath)
+getwd()
+
+

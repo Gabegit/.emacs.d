@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: subfigure
+# key: subfig
+# --
+%usepackage{subcaption} 
+\begin{figure}
+  \begin{subfigure}[b]{0.4\textwidth}
+   \ includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{${1:1.png}}
+    \caption{${2:fig1.a}}
+    \label{${3:fig:1}}
+  \end{subfigure}
+ 
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{${4:2.png}}
+    \caption{${5:Picture 2}}
+    \label{${6:fig:2}}
+ \ end{subfigure}
+ \caption{${7:fig:whole name}}\label{${8:fig:1}}
+\end{figure}

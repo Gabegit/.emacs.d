@@ -1,0 +1,57 @@
+# -*- mode: snippet -*-
+# name: xelatex-template
+# key: 
+# group : template
+# type: command
+# --
+
+% !Mode:: "TeX:UTF-8"
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{xltxtra,fontspec,xunicode}
+\usepackage[slantfont,boldfont]{xeCJK} % 允许斜体和粗体
+\usepackage{pdfsync} %同步pdf，搜索作用
+\usepackage{amsmath}
+%\usepackage{amssymb} % 似乎有冲突。
+\usepackage{hyperref} %编译两次，即可生产书签。支持中文书签（中文标题）
+\hypersetup{
+   unicode=true,%
+   colorlinks=true,%
+   citecolor=black,%
+   filecolor=black,%
+   linkcolor=blue,%
+   urlcolor=blue
+   pdfstartview=FitH 
+}
+
+\setCJKmainfont{SimSun}   % 设置缺省中文字体 徐静蕾字体
+\setCJKmonofont{SimSun}   % 设置等宽字体
+% \setmainfont{TeX Gyre Pagella} % 英文衬线字体
+% \setmonofont{Monaco} % 英文等宽字体
+% \setsansfont{Trebuchet MS} % 英文无衬线字体
+
+\begin{document}
+
+\title{论文要求使用双栏撰写}
+\author{李国民 \thanks{}}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This is the abstract of this paper.
+\end{abstract}
+
+Hello World!
+
+\section{这是第一节} 
+%\label{sct:这是第一节}
+这是第1节this is first section.这是第 1 节 this is first section.这是第节~this is first section.
+\subsection{这是第1.1节} 
+这是第1节this is first section.这是第 1.1 节 this is first section.这是第~.1~this is first section.
+%\label{sct:这是第二节}
+
+\begin{equation}\label{equ:1}
+  x^2+y^4=\frac{x}{y}
+\end{equation}
+
+\end{document} 

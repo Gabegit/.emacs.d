@@ -1,0 +1,37 @@
+# -*- mode: snippet -*-
+# name: mac-xelatex-template
+# key: mac
+# --
+
+% !Mode:: "TeX:UTF-8"
+\documentclass[12pt,UTF8]{ctexart}
+\usepackage{xltxtra,fontspec,xunicode}
+\usepackage[slantfont,boldfont]{xeCJK} % 允许斜体和粗体
+
+% specify fonts
+\newfontfamily\yahei{Microsoft YaHei}  % {\yahei 使用雅黑字体}
+
+\usepackage{pdfsync} %
+\usepackage{amsmath}
+% \usepackage{amssymb} % ËÆºõÓÐ³åÍ»¡£
+\usepackage{hyperref} 
+\hypersetup{
+  unicode=true,%
+  colorlinks=true,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=blue,%
+  urlcolor=blue
+  pdfstartview=FitH 
+}
+% define a differential d: \ud x
+\newcommand{\ud}{\mathrm{d}} 
+
+\begin{document}
+
+\title{}
+\author{Li Guomin}
+\date{\today}
+
+
+\end{document} 

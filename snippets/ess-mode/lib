@@ -1,0 +1,4 @@
+# name : library
+# contributor : Menglong Tan <tanmenglong@gmail.com>
+# --
+library($1)

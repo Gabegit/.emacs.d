@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: makefile-md-arc
+# key: mfile-md
+# --
+
+# create slide and handout simutaneously
+
+font="SimSun"
+
+latex_theme=Singapore
+
+# define a template
+latex_template=/Users/gabe/.emacs.d/beamer_template.tex
+
+
+SRC = $(wildcard *.md)
+PDFS=$(SRC:.md=.pdf)
+
+pdf: clean $(PDFS)
+
+all: clean $(PDFS)
+
+%.pdf: %.md
+<tab>pandoc --toc -N --latex-engine=xelatex -V mainfont=$(font) -f markdown $< -o $(addprefix arc-,$@)
+<tab>pandoc -t beamer --slide-level 2 -V theme:$(latex_theme) -V fontsize:12pt $< -o $@  --template=$(latex_template) --latex-engine=xelatex
+
+read: $(PDFS)
+<tab>open $< &
+
+clean:
+<tab>rm -rf *.pdf

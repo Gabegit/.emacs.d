@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: foreach..in..{..}
+# --
+  foreach ${1:lname} in ${2:any_list} {
+       	${3:codes} `$1'
+	  }

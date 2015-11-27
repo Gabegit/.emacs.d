@@ -1,0 +1,7 @@
+# contributor: Guomin Li ,2012/3/3
+# name:lstlisting
+# key: lst
+# --
+\begin{lstlisting}
+$0  
+\end{lstlisting}

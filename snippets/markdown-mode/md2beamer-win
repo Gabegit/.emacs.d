@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: md2beamer-win
+# key: mkmdbm
+# --
+REM save as  make-`(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`.bat
+
+REM possible theme= AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla, CambridgeUS, Copenhagen, Darmstadt, Dresden, Frankfurt, Goettingen, Hannover, Ilmenau, JuanLesPins, Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester, Singapore, Szeged, Warsaw
+
+pandoc -t beamer --slide-level 2
+--template="/Users/gabe/.emacs.d/beamer_template.tex" `(file-name-nondirectory (buffer-file-name))` --latex-engine=xelatex -V
+theme=Singapore -o  `(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`.pdf
+
+open  `(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`.pdf
+
+
+-------------------------
+another make file make.bat
+-----------------------
+
+pandoc `(file-name-nondirectory (buffer-file-name))` --slide-level 2 -t
+beamer -o `(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`-md.tex
+
+pdflatex `(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`.tex
+pdflatex `(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`.tex
+
+rm -rf *.aux *.log *.nav *.out *.snm *.toc *.vrb

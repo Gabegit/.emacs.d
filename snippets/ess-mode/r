@@ -1,0 +1,4 @@
+# name : return
+# contributor : Menglong Tan <tanmenglong@gmail.com>
+# --
+return($1)

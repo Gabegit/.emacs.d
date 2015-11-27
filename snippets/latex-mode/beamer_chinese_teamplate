@@ -1,0 +1,331 @@
+# contributor: Guomin Li ,2012/3/3
+# name: beamer template chinese
+# key: beamer
+# group : template
+# --
+% !Mode:: "TeX:UTF-8"
+%%% tex文件存为“utf8无签名”格式。cf:ctexcjk*
+
+\documentclass{beamer}
+\setbeamertemplate{caption}[numbered] %显示beamer幻灯片中的图形和表格编号
+\usepackage[space,UTF8]{ctex}
+\usepackage{graphicx}
+%\graphicspath{{graphic/}} %插图搜索路径
+\usepackage{pdfsync} %同步pdf，搜索作用
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{comment}
+\usepackage{hyperref} %编译两次，即可生产书签。支持中文书签（中文标题）
+\hypersetup{
+   unicode=true,%
+  % colorlinks=true,%
+   citecolor=black,%
+   filecolor=black,%
+   % linkcolor=blue,%
+   % urlcolor=blue
+   pdfstartview=FitH 
+}
+\usepackage{cmap} %解决复制中文乱码问题
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\pagestyle{plain}
+
+\newcounter{myexample}[section]
+\setcounter{myexample}{0}
+\newcommand{\myexample}{\par\textbf{Example \addtocounter{myexample}{1}\arabic{myexample}}. }
+
+\newcommand{\myl}{\mathcal{L}}
+
+\usefonttheme[onlymath]{serif} % beamer math font setup
+
+%\mode<presentation>
+%{
+ % \usetheme{Warsaw}
+  % 可以改成别的主题
+ % \setbeamercovered{transparent}
+  % 也可删去
+%}
+%\usetheme{Manhattan}
+%\usetheme{lankton-keynote}%% beamer theme like key note
+\usetheme{${0:CambridgeUS}}
+%\usecolortheme{sidebartab}
+
+%\includecomment{}
+%\excludecomment{}
+
+\begin{document}
+\begin{CJK*}{UTF8}{song}
+
+% 如果内容中用到定理环境, 则需插入以下命令
+%\begin{CJK*}{GBK}{kai}
+%\newtheorem{thm}[theorem]{定理}
+%\newtheorem{example}{例}             % 整体编号
+%\newtheorem{algorithm}{算法}
+%%\newtheorem{theorem}{定理}[section]  % 按 section 编号
+%\newtheorem{definition}{定义}
+%\newtheorem{axiom}{公理}
+%\newtheorem{property}{性质}
+%\newtheorem{proposition}{命题}
+%\newtheorem{lemma}{引理}
+%\newtheorem{corollary}{推论}
+%\newtheorem{remark}{注解}
+%\newtheorem{condition}{条件}
+%\newtheorem{conclusion}{结论}
+%\newtheorem{assumption}{假设}
+%
+%%%%%%%%%%% 一些重定义 %%%%%%%%%%
+%%% 必须在导入中文环境之后
+%\renewcommand{\contentsname}{目录}     % 将Contents改为目录
+%\renewcommand{\abstractname}{摘\ \ 要} % 将Abstract改为摘要
+%\renewcommand{\refname}{参考文献}      % 将References改为参考文献
+%\renewcommand{\indexname}{索引}
+%\renewcommand{\figurename}{图}
+%\renewcommand{\tablename}{表}
+%\renewcommand{\appendixname}{附录}
+%\renewcommand{\proofname}{\hei 证明}
+%\renewcommand{\algorithm}{\hei 算法}
+%\end{CJK*}
+
+\CJKtilde
+\title[${1:标题}]{${2:论文的正式标题}}
+% 如果标题不长, [短标题]可以略去
+ %\subtitle
+%{也许有的副标题}
+
+\author{李国民 \\ liguomin72@163.com }
+\institute[江财经院]%
+{
+江西财经大学\\
+  经济学院
+}
+
+\date{\today}
+
+% 可以使用会议的全称或简称
+% 如果你想插入学校的徽章, 其文件名为 "university-logo-filename.xxx", 
+% 其中 xxx 是 pdflatex 能接受的格式, 则可用以下命令插入
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+% 如果你想要在每一小节之前都显示一下目录, 则可把一下小段的注解号 "%" 删去
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{概要}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+% 除掉以下命令的注解 "%" 后, 许多环境都会自动逐段显示
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{概~述}
+  \tableofcontents
+  % 你也可以插入选项 [pausesections]
+\end{frame}
+%首先规划好结构
+\section{$6}
+\subsection{$9}
+
+\section{$7}
+\subsection{$10}
+
+\section{$8}
+\subsection{$11}
+
+
+
+
+\end{CJK*}
+\end{document}
+%%=========
+%%多个作者的情况
+%\author[作者甲等] % (如果作者不多, 则可略去此方括号) 
+%{作者甲\inst{1} \and 作者乙\inst{2}}
+%% \inst{?} 仅用于有多个单位的情形
+%\institute[某甲和某乙大学] % (方括号内的简称是可以略去的)
+%{
+%  \inst{1}%
+%  某甲大学\\
+%  数学系
+%  \and
+%  \inst{2}%
+%  某乙大学\\
+%  计算机科学系}
+%% \inst 仅用于有多个单位的情形
+%%================
+
+%%%====
+
+% 以下的演示文稿仅供参考, 不过可以提供一些忠告：
+
+% - 除总结外, 最好不超过 3 节;
+% - 每节至多分成 3 小节;
+% - 每屏约 30 秒至 2 分钟, 因此总共 15 至 30 屏为佳.
+
+% - 一般说来, 会议听众对你所报告的东西知之甚少, 因此尽量简单!
+% - 在 20 分钟报告里只要讲清主要思想即可, 不要深入细节, 宁可牺牲一点严格性;
+% - 如果你略去了证明或实现的关键细节, 只要声明一下即可, 没有人会感到不高兴.
+
+%\section{动机}
+%
+%\subsection{我们研究的基本问题}
+%
+%\begin{frame}
+%  \frametitle{使标题富有启发性}
+%  \framesubtitle{副题是可选的}
+%
+%  \begin{itemize}
+%  \item
+%    多使用罗列~(\texttt{itemize})~环境.
+%  \item
+%    使用短句.
+%  \end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{使标题富有启发性}
+%
+%  你可以用以下方式创建覆盖片\dots
+%  \begin{itemize}
+%  \item 利用~\texttt{pause}~命令:
+%    \begin{itemize}
+%    \item
+%      第一项.
+%      \pause
+%    \item
+%      第二项.
+%    \end{itemize}
+%  \item
+%    利用覆盖的明细表:
+%    \begin{itemize}
+%    \item<3->
+%      第一项.
+%    \item<4->
+%      第二项.
+%    \end{itemize}
+%  \item
+%    使用一般的~\texttt{uncover}~命令:
+%    \begin{itemize}
+%      \uncover<5->{\item
+%        第一项.}
+%      \uncover<6->{\item
+%        第二项.}
+%    \end{itemize}
+%  \end{itemize}
+%\end{frame}
+%
+%
+%\subsection{以前的工作}
+%
+%\begin{frame}
+%  \frametitle{标题一}
+%  内容一
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{标题二}
+%  内容二
+%\end{frame}
+%
+%\section{我们的结果或贡献}
+%
+%\subsection{主要结果}
+%
+%\begin{frame}
+%  \frametitle{标题三}
+%  内容三
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{标题四}
+%  内容四
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{标题五}
+%  内容五
+%\end{frame}
+%
+%\subsection{证明或实现的基本思路}
+%
+%\begin{frame}
+%  \frametitle{标题六}
+%  内容六
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{标题七}
+%  内容七
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{标题八}
+%  内容八
+%\end{frame}
+%
+%\section*{总结}
+%
+%\begin{frame}
+%  \frametitle<presentation>{总结}
+%
+%  % 是总结保持简短.
+%  \begin{itemize}
+%  \item
+%    以一两行的篇幅列出你的报告的\alert{最主要的结论}.
+%  \item
+%    以一两行的篇幅列出你的报告的\alert{次要的结论}.
+%  \item
+%    也许还有\alert{第三个结论}, 但不能再多.
+%  \end{itemize}
+%
+%  % 以下的展望是可选的.
+%  \vskip0pt plus.5fill
+%  \begin{itemize}
+%  \item
+%    展望
+%    \begin{itemize}
+%    \item
+%      你没有解决的一些问题.
+%    \item
+%      你没有解决的另一些问题.
+%    \end{itemize}
+%  \end{itemize}
+%\end{frame}
+%
+%
+%% 以下内容是备选的, 一般并不需要.
+%\appendix
+%\section<presentation>*{附录}
+%\subsection<presentation>*{进一步阅读}
+%
+%\begin{frame}[allowframebreaks]
+%  \frametitle<presentation>{进一步阅读}
+%
+%  \begin{thebibliography}{10}
+%
+%  \beamertemplatebookbibitems
+%  % 以综述性书籍当头.
+%
+%  \bibitem{Author1990}
+%    张某某.
+%    \newblock {\em 关于任何事物的手册}.
+%    \newblock 某某出版社, 1990.
+%
+%
+%  \beamertemplatearticlebibitems
+%  % 辅以有趣的文章, 越少越好. 
+%
+%  \bibitem{Someone2000}
+%    王某某.
+%    \newblock 关于这个或那个.
+%    \newblock {\em 某某期刊}, 2(1):50--100,
+%    2000.
+%  \end{thebibliography}
+%\end{frame}
+%%%============

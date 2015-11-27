@@ -1,0 +1,10 @@
+# contributor: Guomin Li ,2012/3/3
+# name: itemize
+# key: item
+# binding:C-3
+# --
+
+\begin{itemize}
+	\item $1
+	\item $2
+\end{itemize}

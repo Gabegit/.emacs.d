@@ -1,0 +1,8 @@
+# contributor: Guomin Li ,2012/3/3
+# name: itemize
+# key: item
+# --
+\begin{itemize}
+	\item $1
+	\item $2
+\end{itemize}

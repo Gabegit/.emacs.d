@@ -1,0 +1,15 @@
+;; -*- mode: Lisp; -*-
+
+(setq prj-version "0.4")
+
+(setq prj-list
+      '(("eproject" "c:/Users/gabes/AppData/Roaming/.emacs.d/plugins/emacs-for-python/extensions/eproject")))
+
+(setq prj-last-open "eproject")
+
+(setq prj-frame-pos
+      '((top + -8)
+	(left + -8)
+	(width . 147)
+	(height . 36)))
+

@@ -1,0 +1,6 @@
+# contributor: Guomin Li ,2012/3/11
+# name: insert _{}^{}
+#binding: C-6
+# key: idu
+# --
+_{$1}^{$2}

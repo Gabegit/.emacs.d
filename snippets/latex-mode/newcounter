@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: newcounter
+# key: newcounter
+# --
+\newcounter{$1}[chapter]
+\renewcommand{\the$1}{\thechapter.\arabic{task}}
+\newcommand{$1}[1]{\par \noindent {$0 Example}\refstepcounter{$1}\hspace{0.15em}\textbf{\the$1}】\hspace{0.5em}{ #1}}

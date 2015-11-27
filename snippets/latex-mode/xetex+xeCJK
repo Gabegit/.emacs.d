@@ -1,0 +1,43 @@
+# -*- mode: snippet -*-
+# name: xetex+xeCJK
+# key: xetex
+# group : template
+# --
+
+% !Mode:: "TeX:UTF-8"
+\documentclass[12pt,a4paper]{article}
+\usepackage{xltxtra,fontspec,xunicode} %%fontspec (user interface for font handling),xltxtra (general extra utilities),xunicode:Generate Unicode characters from accented glyphs.
+\usepackage[slantfont,boldfont]{xeCJK} % 允许斜体和粗体
+\usepackage{pdfsync} %同步pdf，搜索作用
+\usepackage{amsmath}
+%\usepackage{amssymb} % 似乎有冲突。
+\usepackage{hyperref} %编译两次，即可生产书签。支持中文书签（中文标题）
+\hypersetup{
+   unicode=true,%
+   colorlinks=true,%
+   citecolor=black,%
+   filecolor=black,%
+   linkcolor=blue,%
+   urlcolor=blue
+   pdfstartview=FitH 
+}
+
+\setCJKmainfont{SimSun}   % 设置缺省中文字体 徐静蕾字体
+\setCJKmonofont{SimSun}   % 设置等宽字体
+% \setmainfont{TeX Gyre Pagella} % 英文衬线字体
+% \setmonofont{Monaco} % 英文等宽字体
+% \setsansfont{Trebuchet MS} % 英文无衬线字体
+
+\begin{document}
+
+\title{$1}
+\author{$2 \thanks{$3}}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+$4
+\end{abstract}
+
+
+\end{document} 

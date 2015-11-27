@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: figure-side-by-side
+# key: figure-side-by-side
+# --
+\begin{figure}[htbp]
+\begin{minipage}{0.5\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{${1:pic1}}
+\caption{${2:1}}
+\label{fig:$1}
+\end{minipage}%
+\begin{minipage}{0.5\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{${3:pic2}}
+\caption{${4:2}}
+\label{fig:$3}
+\end{minipage}
+\end{figure}

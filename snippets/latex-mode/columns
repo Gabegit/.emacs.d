@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: columns_col
+# key: col
+# --
+\begin{columns}
+  \column{0.5\textweight}
+
+
+   \column{0.5\textweight}
+
+
+\end{columns}

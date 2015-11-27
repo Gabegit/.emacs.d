@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: task
+# key: task
+# --
+\task{$1} $2
+\begin{lstlisting}
+$0
+\end{lstlisting}
+
+

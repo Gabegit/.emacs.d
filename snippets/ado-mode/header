@@ -1,0 +1,8 @@
+#name : header for stata code
+# --
+// File: ${1:` (file-name-nondirectory(buffer-file-name))`} used for stata 11 edition
+// Author:Guomin Li,email: liguomin88@gmail.com
+// Description: $2
+// ${3:Last Modified:`(ado-insert-nice-current-date)`}
+//
+

@@ -1,0 +1,118 @@
+# -*- mode: snippet -*-
+# name: mac-beamer-xecjk
+# key: xebeamer
+# --
+% -*- coding: utf-8 -*-
+% 用法：将此文档存为 utf-8 格式
+%  可以采用xelatex 引擎编译
+
+
+\documentclass[14pt,notheorems,xcolor=dvipsnames]{beamer} 
+ %for windows:dvipdfm选项是关键
+
+
+\usepackage{fontspec,xunicode,xltxtra,beamerthemesplit}
+\usepackage[slantfont,boldfont]{xeCJK} % 允许斜体和粗体
+
+%%%% beamer setup %%%%
+\usefonttheme[onlymath]{serif} % beamer math font setup
+\setbeamertemplate{caption}[numbered] %显示beamer幻灯片中的图形和表格编号
+%\usetheme{Madrid} % setup theme
+%\usetheme{Singapore} % setup theme
+\usetheme{Warsaw} % set theme
+
+\setbeamercovered{highly dynamic}
+% 让\pause 或者 \onslide 设定的未显示内容用半透明显示。
+% invisible：默认值，不显示后面页面的内容
+% transparent：以半透明样式显示后面页面的内容
+% dynamic：同上，但后面页面的内容透明度会逐步变化
+% highly dynamic：同上，但效果更明显
+
+%\usecolortheme[named=OliveGreen]{structure} % change the color
+\setbeamertemplate{items}[ball]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+%\usetheme[height=12mm]{Rochester} # 设置标题栏高度为12mm
+% \usecolortheme{sidebartab}
+%\useoutertheme{infolines} % add info lines in footnote
+
+%   除掉以下命令的注解 "%" 后, 许多环境都会自动逐段显示
+%\beamerdefaultoverlayspecification{<+->}
+
+\newtheorem{theorem}{定理}
+\newtheorem{example}[theorem]{例子}
+\newtheorem*{theorem*}{定理}
+\newtheorem*{example*}{例子}
+
+    %\newtheorem{example}{例}             % 整体编号
+    \newtheorem{algorithm}{算法}
+   % \newtheorem{theorem}{定理}[section]  % 按 section 编号
+    \newtheorem{definition}{定义}
+    \newtheorem{axiom}{公理}
+    \newtheorem{property}{性质}
+    \newtheorem{proposition}{命题}
+    \newtheorem{lemma}{引理}
+    \newtheorem{corollary}{推论}
+    \newtheorem{remark}{注解}
+    \newtheorem{condition}{条件}
+    \newtheorem{conclusion}{结论}
+    \newtheorem{assumption}{假设}
+
+   \renewcommand{\contentsname}{目录}     % 将Contents改为目录
+    \renewcommand{\abstractname}{摘\ \ 要} % 将Abstract改为摘要
+    \renewcommand{\refname}{参考文献}      % 将References改为参考文献
+    \renewcommand{\indexname}{索引}
+    \renewcommand{\figurename}{图}
+    \renewcommand{\tablename}{表}
+    \renewcommand{\appendixname}{附录}
+    \renewcommand{\proofname}{证明}
+    \renewcommand{\algorithm}{算法}
+
+
+
+% set fonts
+\setCJKmainfont{Microsoft YaHei}   % 设置缺省中文字体
+\setCJKmonofont{SimSun}   % 设置等宽字体
+% \setmainfont{TeX Gyre Pagella} % 英文衬线字体
+\setmonofont{Microsoft YaHei} % 英文等宽字体
+% \setsansfont{Trebuchet MS} % 英文无衬线字体
+
+\usepackage{amsmath} %removed as obsolete
+\usepackage{amssymb}
+\usepackage{mathrsfs} %花体
+\usepackage{graphicx}
+% \graphicspath{{graphic/}} %插图搜索路径
+\usepackage{pdfsync} %同步pdf，搜索作用
+\usepackage{dcolumn}
+\usepackage{cmap} %解决复制中文乱码问题
+
+
+%%%%%%%%%% begin document %%%%%%%%%%%%%
+
+\begin{document}
+
+
+ \title[Bemer要义]{Beamer~中文使用要义}
+  % 如果标题不长, [短标题]可以略去
+  \subtitle {可用两种编译引擎}
+
+  \author{李国民 \ liguomin88@gmail.com } \institute[江财经院]%
+  {江西财经大学经济学院}
+
+  \date{\today}
+
+
+
+
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{概~述}
+    \tableofcontents
+    % 你也可以插入选项 [pausesections]
+  \end{frame}
+
+
+
+\end{document}

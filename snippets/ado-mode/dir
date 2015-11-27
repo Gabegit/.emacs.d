@@ -1,0 +1,3 @@
+#name : get directory of the file
+# --
+`(file-name-directory(buffer-file-name))`

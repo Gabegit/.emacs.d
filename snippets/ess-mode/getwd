@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: getwd
+# key: getwd
+# --
+
+prjPath = "`(file-name-directory (buffer-file-name))`" # \\ need to be replaced by /
+setwd(prjPath)

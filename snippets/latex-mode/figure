@@ -1,0 +1,11 @@
+# contributor: Guomin Li ,2012/3/4
+# name: figure
+# key: figure
+# --
+
+\begin{figure}
+\centering
+\includegraphics${1:[width=\linewidth,height=\textheight,keepaspectratio]}${2:{figurefile}}
+\caption{$3} \label{fig:$4}
+$0
+\end{figure}

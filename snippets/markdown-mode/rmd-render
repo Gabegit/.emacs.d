@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: rmd-render
+# key: render
+# --
+
+Rscript -e "rmarkdown::render('`(file-name-nondirectory (buffer-file-name))`','${1:beamer_presentation,ioslides_presentation,pdf_document}')"

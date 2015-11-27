@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: frame
+# key: frame
+#binding:C-r
+# --
+%% == $1 =============
+%%====================
+\begin{frame}[allowframebreaks]
+\frametitle{$1}
+$2
+\end{frame}

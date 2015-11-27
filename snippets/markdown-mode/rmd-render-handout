@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: rmd-render-handout
+# key: crhan
+# --
+
+
+cp `(file-name-nondirectory (buffer-file-name))` `(file-name-nondirectory (file-name-sans-extension
+(buffer-file-name)))`-handout.Rmd |perl -pi -w -e 's/----//g;' `(file-name-nondirectory
+(file-name-sans-extension (buffer-file-name)))`-handout.Rmd | Rscript -e "rmarkdown::render('`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`-handout.Rmd','${1:pdf_document}')"

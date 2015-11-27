@@ -1,0 +1,9 @@
+# contributor: Guomin Li ,2012/3/3
+# name: align math
+# key: align
+# group : math
+# --
+ \begin{align}
+    $1& = $2 \\label{eq:$5} \\\\
+    $3& = $4  \\label{eq:$6}
+ \end{align}

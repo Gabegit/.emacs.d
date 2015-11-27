@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: matrix with bold brace
+# key: bmatrix
+# group : math
+# --
+\begin{bmatrix}
+ $0 & & \\\\
+ & & \\\\
+ & & 
+\end{bmatrix}

@@ -1,0 +1,13 @@
+README for latex2e.texi, aka the latex2e-help-texinfo package.
+Public domain.  This file originally written 2008, Karl Berry.
+
+This project is an attempt to write a reference manual for core LaTeX.
+It is unofficial and the LaTeX Project members have not reviewed it.
+
+http://home.gna.org/latexrefman (the project home page) has more
+information, including links to the current output in various formats,
+sources, mailing lists, and other infrastructure.
+
+Help is most definitely wanted.  (Search for "xx" in the source for only
+a few of the known deficiencies.)  Please email any bug reports, new
+material, general discussion, whatever, to latexrefman-discuss@gna.org.

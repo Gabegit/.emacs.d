@@ -1,0 +1,9 @@
+# contributor: Guomin Li ,2015/2/27
+# name: cppFunction_arma
+# group: Rcpp
+# key:arma
+# --
+cppFunction(depends = "RcppArmadillo", code='
+  ${arma::mat solve_arma_back( arma::mat A, arma::colvec b ) {
+  const arma::vec x = solve(trimatu( A ), b); + return x;}
+}')

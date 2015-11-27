@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for other comments(foro)
+# key: foroc
+# --
+%<$1
+$0
+%/$1>

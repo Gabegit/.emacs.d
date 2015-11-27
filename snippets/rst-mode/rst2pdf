@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rst2pdf
+# key: r2pdf
+# --
+pandoc -N --template="f:/BaiduYun/software/mySoftData/emacs/mytemplate.tex" "`(file-name-nondirectory (buffer-file-name))`" --latex-engine=xelatex --toc -o  "`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.pdf"

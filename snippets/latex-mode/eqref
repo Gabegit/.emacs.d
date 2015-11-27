@@ -1,0 +1,6 @@
+# contributor: Guomin Li ,2012/3/10
+# name: \eqref{}
+# group: math
+# key:eqref
+# --
+\eqref{${1:eq:}$2}

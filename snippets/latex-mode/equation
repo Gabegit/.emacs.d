@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name:equation 
+# key: eq
+# group : math
+# --
+\begin{equation}\label{eq:$1}
+  $2
+\end{equation}
