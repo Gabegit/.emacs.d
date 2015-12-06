@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: md-yaml
+# key: mdyaml
+# --
+
+---
+title: ${1}
+author: ${2}
+date: ${3}
+# bibliography: /Users/gabe/Documents/Research/mylib.bib
+# cls: chinese-gb7714-2005-numeric.csl # 默认为使用芝加哥「作者－日期」格式
+number-sections: yes
+documentclass: ctexart
+classoption: "hyperref,"
+classoption: "a4paper"
+#geometry: margin=1in # mytemplate.tex 已经设置了。
+fontsize: 12pt
+
+---

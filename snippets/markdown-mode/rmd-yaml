@@ -6,7 +6,7 @@
 ---
 title: "${0}"
 author: "${1:李国民}"
-date: '\`r format(Sys.Date(), “%Y %B %d”)\`’
+date: '\`r format(Sys.Date(), "%Y %B %d")`'
 output:
 <sp>beamer_presentation:
 <sp><sp>colortheme: lily

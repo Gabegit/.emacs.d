@@ -1,0 +1,70 @@
+# -*- mode: snippet -*-
+# name: md-pdf-word-html-best-ans
+# key: mdans
+# --
+
+# for compiling markdown with Chinese fonts using pandoc
+# define a template
+latex_template=/Users/gabe/.emacs.d/mytemplate.tex
+css=/Users/gabe/.emacs.d/pandoc.css
+docsty=/Users/gabe/.emacs.d/word-styles-reference-01.docx
+
+# Build a number of formats into the [yas] elisp error! Symbol's value as variable is void: out/ directory. These will get published via Github pages.
+
+# create a outdir directory
+outdir=out
+$(outdir):
+<tab>mkdir -p $(outdir)
+
+# define files
+SRC = $(filter-out %-ans.md,$(wildcard *.md))
+PDFS=$(SRC:.md=.pdf)
+DOCXS=$(SRC:.md=.docx)
+HTMLS=$(SRC:.md=.html)
+SHOW = $(SRC:.md=-ans.mdt)
+ANS = $(SRC:.md=-ans.md)
+
+# commands
+pdf: clean $(outdir) choose $(PDFS)
+doc: $(DOCXS)
+html: $(HTMLS)
+choose: $(SHOW)
+
+all: clean $(outdir) choose $(PDFS) doc html
+
+# rules
+%.pdf: %.md
+<tab>pandoc --toc -N --filter /usr/local/bin/pandoc-citeproc --table-of-contents --toc-depth 2 --template=$(latex_template) --latex-engine=xelatex -V CJKmainfont=$(font) -f markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash $< -o $(outdir)/$@
+
+%.docx: %.md
+<tab>pandoc  -N --reference-docx=$(docsty) --filter pandoc-citeproc  --highlight-style=haddock -f markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures $< -o $(outdir)/$@
+
+%.html: %.md
+<tab>pandoc --filter pandoc-citeproc  --css=$(css) --mathjax --highlight-style=haddock --smart --standalone --table-of-contents --toc-depth 3 -f markdown -t html  $< -o $(outdir)/$@
+<tab>cp $(css) $(outdir)
+
+%-ans.mdt: $(filter-out %-ans.md,%.md)
+<tab>cp $< $@
+<tab>perl -p0i -w -e 's/\<\!-- ans(.+?)--\>/\\textcolor\{blue\}\{Ans\n\}\1/smg' $@
+<tab>mv $@ $(basename $@).md
+<tab>pandoc  -N --filter /usr/local/bin/pandoc-citeproc --table-of-contents --toc-depth 2 --template=$(latex_template) --latex-engine=xelatex -V CJKmainfont=$(font) -f markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash $(basename $@).md -o $(outdir)/$(basename $@).pdf
+<tab>pandoc  -N --reference-docx=$(docsty) --filter pandoc-citeproc  --highlight-style=haddock -f markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures $(basename $@).md -o $(outdir)/$(basename $@).docx
+
+# cp $< $(addsuffix -ans.md,$(basename $<))
+
+# perl -pi -w -e 's/search/replace/g;' *.php
+# -e means execute the following line of code.
+# -i means edit in-place
+# -w write warnings
+# -p loop
+# sm multilines
+
+
+read: $(PDFS)
+<tab>open $< &
+
+clean:
+<tab>rm -rf $(ANS) $(outdir)/*.pdf $(outdir)/*.html $(outdir)/*.docx
+
+distclean:
+<tab>rm -rf *~

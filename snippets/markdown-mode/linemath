@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: mathline
+# key: ml
+# group : math
+# --
+
+$$${0}$$
+

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name : mathmode
+# key : md
+# group : math
+# --
+$$0$

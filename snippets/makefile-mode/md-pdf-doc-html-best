@@ -7,7 +7,7 @@
 # define a template
 latex_template=/Users/gabe/.emacs.d/mytemplate.tex
 css=/Users/gabe/.emacs.d/pandoc.css
-docsty/Users/gabe/.emacs.d/word-styles-reference-01.docx
+docsty=/Users/gabe/.emacs.d/word-styles-reference-01.docx
 
 # Build a number of formats into the `out/` directory. These will get published via Github pages.
 
